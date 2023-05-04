@@ -6,16 +6,26 @@
       "locations": [
         {
           "title": "Location_1.1",
-          "locations": [],
+          "locations": [
+            {
+              "title": "Location_1.1.1",
+              "locations": [],
+              "loot": {
+                "items": []
+              },
+              "previous_location": "Location_1.1"
+            }
+          ],
           "loot": {
             "items": []
-          }
+          },
+          "previous_location": "Root"
         }
       ],
       "loot": {
         "items": []
       },
-      "previous_location": "Location_1"
+      "previous_location": "Root"
     },
     {
       "title": "Location_2",
@@ -31,7 +41,7 @@
       "loot": {
         "items": []
       },
-      "previous_location": "Location_2"
+      "previous_location": "Root"
     }
   ],
   "loot": {

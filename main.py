@@ -4,17 +4,14 @@ from actors.player import Player
 from events.fight import Fight
 from items.storage import Storage
 from locations.location import Location
+from utils.game_exeptions import ExitGame
 from utils.location_movement import location_movement, read_location_from_json, show_current_location
 from utils.map_maker import map_maker
 
-
-# player = Player(first_name="Player", inventory=Storage([]),
-#                 hp=100, attack_point=10)
-# enemies = [
-#     Enemy(first_name="Enemy", inventory=Storage([]), hp=40, attack_point=10),
-#     Enemy(first_name="Enemy", inventory=Storage([]), hp=40, attack_point=40),
-#     Enemy(first_name="Enemy", inventory=Storage([]), hp=40, attack_point=10)
-# ]
+def runGame(map):
+    current = map
+    while True:
+        current = location_movement(map, current)
 
 # while player.is_alive():
 #     for enemy in enemies:
@@ -28,10 +25,16 @@ from utils.map_maker import map_maker
 #     print("Wasted!")
 
 map = read_location_from_json()
-current = map
-current = location_movement(map)
-print('-------------------')
-current = location_movement(current)
-show_current_location(current)
+
+try:
+    runGame(map)
+except ExitGame:
+    print("Goodbye!")
+
+# current = location_movement(map)
+# print('-------------------')
+# current = location_movement(current)
+# show_current_location(current)
+
 
 # map_maker()

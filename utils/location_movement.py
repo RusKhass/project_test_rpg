@@ -1,5 +1,8 @@
 import json
 import os
+from utils.game_exeptions import ExitGame
+
+from utils.map_maker import search_location_in_dict
 
 MAP_FILE_PATH = "./map.json"
 
@@ -14,20 +17,28 @@ def read_location_from_json():
 def show_current_location(map):
     for idx, location in enumerate(map["locations"]):
         print("{}. {}".format(idx + 1, location["title"]))
+    print("-1. back")
+    print("q. exit")
     
 def get_location_by_idx():
     """get location by idx using console"""
-    return int(input("Enter location number: ")) - 1
+    return input("Enter location number: ")
 
 def move(location, idx):
     """move to the next location"""
     return location["locations"][idx]
 
-def location_movement(map, current=None):
-    if current is None:
-        current = map
-    show_current_location(map)
-    idx = get_location_by_idx()
-    current = move(map, idx)
+def location_movement(map, current):
     show_current_location(current)
+    idx = get_location_by_idx()
+    if idx == '-1':
+        current = search_location_in_dict(map, current["previous_location"])
+    elif idx.isnumeric():
+        idx = int(idx) - 1
+        try:
+            current = move(current, idx)
+        except IndexError:
+            print("Wrong location number")
+    elif idx == 'q':
+        raise ExitGame
     return current

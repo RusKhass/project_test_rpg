@@ -1,2 +1,3 @@
 add npc and npc type(merchant, quest giver)
-add id for location
+исправить перемещение по локации
+добавить возможность добавления противников на локацию в map_maker
