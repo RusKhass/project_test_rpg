@@ -1,0 +1,52 @@
+{
+  "title": "Global map",
+  "locations": [
+    {
+      "title": "Location 1",
+      "locations": [
+        {
+          "title": "Location 1.1",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        },
+        {
+          "title": "Location 1.2",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        }
+      ],
+      "loot": {
+        "items": []
+      }
+    },
+    {
+      "title": "Location 2",
+      "locations": [
+        {
+          "title": "Location 2.1",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        },
+        {
+          "title": "Location 2.2",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        }
+      ],
+      "loot": {
+        "items": []
+      }
+    }
+  ],
+  "loot": {
+    "items": []
+  }
+}

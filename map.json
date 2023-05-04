@@ -1,0 +1,41 @@
+{
+  "title": "Root",
+  "locations": [
+    {
+      "title": "Location_1",
+      "locations": [
+        {
+          "title": "Location_1.1",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        }
+      ],
+      "loot": {
+        "items": []
+      },
+      "previous_location": "Location_1"
+    },
+    {
+      "title": "Location_2",
+      "locations": [
+        {
+          "title": "Location_2.1",
+          "locations": [],
+          "loot": {
+            "items": []
+          }
+        }
+      ],
+      "loot": {
+        "items": []
+      },
+      "previous_location": "Location_2"
+    }
+  ],
+  "loot": {
+    "items": []
+  },
+  "previous_location": "Root"
+}

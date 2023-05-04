@@ -1,0 +1,2 @@
+add npc and npc type(merchant, quest giver)
+add id for location
