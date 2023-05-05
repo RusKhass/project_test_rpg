@@ -1,6 +1,7 @@
 import os
 import json
 from collections import deque
+from actors.actor import Actor
 
 from locations.location import Location
 
@@ -29,6 +30,14 @@ def get_location_from_console(location: Location):
         l["previous_location"] = current_location_title
     else:
         raise ValueError("Location not found")
+    enemy_first_name = input("Enter enemy first name: ")
+    enemy_first_name = Actor(first_name=enemy_first_name, enemies=[])
+    enemy_hp = input("Enter enemy hp: ")
+    enemy_hp = Actor(hp=enemy_hp, enemies=[])
+    enemy_attack_point = input("Enter enemy attack point: ")
+    enemy_attack_point = Actor(attack_point=enemy_attack_point, enemies=[]) #TODO: should be int from warior?
+    enemy_inventory = input("Enter enemy inventory: ")
+    enemy_inventory = Actor(inventory=enemy_inventory, enemies=[])
 
 def map_maker():
     map = Location(locations=[])
